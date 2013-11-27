@@ -1,43 +1,144 @@
 (function(bespoke) {
-
   bespoke.plugins.fx = function(deck) {
-
-		Move
-		1 Move to left/ from right
-		2 Move to right/ from left
-		3 Move to top/ from bottom
-		4 Move to bottom/ from top
+    var fx = {
+    // Move
+    "move-to-left-from-right": {
+      id: 1,
+      group: "move",
+      label: "Move to left/ from right",
+			outClass: 'pt-page-moveToLeft',
+			inClass: 'pt-page-moveFromRight'
+    },
+    "move-to-right-from-left": {
+      id: 2,
+      group: "move",
+      label: "Move to right / from left",
+			outClass: 'pt-page-moveToRight',
+			inClass: 'pt-page-moveFromLeft'
+    },
+    "move-to-top-from-bottom": {
+      id: 3,
+      group: "move",
+      label: "Move to top / from bottom",
+			outClass: 'pt-page-moveToTop',
+			inClass: 'pt-page-moveFromBottom'
+    },
+    "move-to-bottom-from-top": {
+      id: 4,
+      group: "move",
+      label: "Move to bottom / from top",
+			outClass: 'pt-page-moveToBottom',
+			inClass: 'pt-page-moveFromTop'
+    },
 		
-    Fade
-		5 Fade / from right
-		6 Fade / from left
-		7 Fade / from bottom
-		8 Fade / from top
-		9 Fade left / Fade right
-		10 Fade right / Fade left
-		11 Fade top / Fade bottom
-		12 Fade bottom / Fade top
+    // Fade
+    "fade-from-right": {
+      id: 5,
+      group: "fade",
+      label: "Fade / from right",
+			outClass: 'pt-page-fade',
+			inClass: 'pt-page-moveFromRight pt-page-ontop'
+    },
+    "fade-from-left": {
+      id: 6,
+      group: "fade",
+      label: "Fade / from left",
+			outClass: 'pt-page-fade',
+			inClass: 'pt-page-moveFromLeft pt-page-ontop'
+    },
+    "fade-from-bottom": {
+      id: 7,
+      group: "fade",
+      label: "Fade / from bottom",
+			outClass: 'pt-page-fade',
+			inClass: 'pt-page-moveFromBottom pt-page-ontop'
+    },
+    "fade-from-top": {
+      id: 8,
+      group: "fade",
+      label: "Fade / from top"
+			outClass: 'pt-page-fade',
+			inClass: 'pt-page-moveFromTop pt-page-ontop'
+    },
+    "fade-left-fade-right": {
+      id: 9,
+      group: "fade",
+      label: "Fade left / Fade right",
+			outClass: 'pt-page-moveToLeftFade',
+			inClass: 'pt-page-moveFromRightFade'
+    },
+    "fade-right-fade-left": {
+      id: 10,
+      group: "fade",
+      label: "Fade right / Fade left",
+			outClass: 'pt-page-moveToRightFade',
+			inClass: 'pt-page-moveFromLeftFade'
+    },
+    "fade-top-fade-bottom": {
+      id: 11,
+      group: "fade",
+      label: "Fade top / Fade bottom",
+			outClass: 'pt-page-moveToTopFade',
+			inClass: 'pt-page-moveFromBottomFade'
+    },
+    "fade-bottom-fade-top": {
+      id: 12,
+      group: "fade",
+      label: "Fade bottom / Fade top",
+			outClass: 'pt-page-moveToBottomFade',
+			inClass: 'pt-page-moveFromTopFade'
+    },
     
-    Different easing
-		13 Different easing / from right
-		14 Different easing / from left
-		15 Different easing / from bottom
-		16 Different easing / from top
+    // Different easing
+    "different-easing-from-right": {
+      13 Different easing / from right
+    },
+    "different-easing-from-left": {
+      14 Different easing / from left
+    },
+    "different-easing-from-bottom": {
+      15 Different easing / from bottom
+    },
+    "different-easing-from-top": {
+      16 Different easing / from top
+    },
     
-		Scale
-		17 Scale down / from right
-		18 Scale down / from left
-		19 Scale down / from bottom
-		20 Scale down / from top
-		21 Scale down / scale down
-		22 Scale up / scale up
-		23 Move to left / scale up
-		24 Move to right / scale up
-		25 Move to top / scale up
-		26 Move to bottom / scale up
+    // Scale
+    "scale-down-from-right": {
+      17 Scale down / from right
+    },
+    "scale-down-from-left": {
+      18 Scale down / from left
+    },
+    "scale-down-from-bottom": {
+      19 Scale down / from bottom
+    },
+    "scale-down-from-top": {
+      20 Scale down / from top
+    },
+    "scale-down-scale-down": {
+      21 Scale down / scale down
+    },
+    "scale-up-scale-up": {
+      22 Scale up / scale up
+    },
+    "move-to-left-scale-up": {
+      23 Move to left / scale up
+    },
+    "move-to-right-scale-up": {
+      24 Move to right / scale up
+    },
+    "move-to-top-scale-up": {
+      25 Move to top / scale up
+    },
+    "move-to-bottom-scale-up": {
+      26 Move to bottom / scale up
+    },
+    "scale-down-scale-up": {
 		27 Scale down / scale up
+    },
     
-		Rotate
+    // Rotate
       Glue
 			28 Glue left / from right
 			29 Glue right / from left
@@ -92,6 +193,7 @@
 			65 Carousel to bottom
     66 Sides
 		67 Slide
+    }
 
 
 
