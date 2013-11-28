@@ -495,39 +495,54 @@
         inClass: 'pt-page-rotateSlideIn'
       }
     };
-    /*
-      Interact with the deck
-      https://github.com/markdalgleish/bespoke.js#deck-instances
-    */
-    deck.next();
-    deck.prev();
-    deck.slide(0);
-
+    
+		var animEndEventNames = {
+			'WebkitAnimation' : 'webkitAnimationEnd',
+			'OAnimation' : 'oAnimationEnd',
+			'msAnimation' : 'MSAnimationEnd',
+			'animation' : 'animationend'
+		};
+    
+		// animation end event name
+		var animEndEventName = animEndEventNames[ Modernizr.prefixed( 'animation' ) ];
+    
+    var runTransition = function(outSlide, inSlide) {
+      var outClass = "pt-page-rotateSlideOut";
+      var inClass = "pt-page-rotateSlideIn";
+      
+      outSlide.addEventListener(animEndEventName, function(event) {
+        event.target.classList.remove(outClass);
+      });
+      
+      inSlide.addEventListener(animEndEventName, function(event) {
+        event.target.classList.remove(inClass);
+        event.target.classList.add('pt-page-current');
+      });
+      
+      outSlide.classList.add(outClass);
+      inSlide.classList.add(inClass);
+    };
+    
     /*
        Handle events
        https://github.com/markdalgleish/bespoke.js#events
     */
-    deck.on('activate', function(e) {
-      console.log('Slide #' + e.index + ' was activated!', e.slide);
+    deck.on('next', function(event) {
+      if(event.index < deck.slides.length-1) {
+        var outSlide = event.slide;
+        var inSlide = deck.slides[event.index+1];
+        
+        runTransition(outSlide, inSlide);
+      }
     });
 
-    deck.on('deactivate', function(e) {
-      console.log('Slide #' + e.index + ' was deactivated!', e.slide);
-    });
-
-    deck.on('next', function(e) {
-      console.log('The next slide is #' + (e.index + 1), deck.slides[e.index + 1]);
-      // return false to cancel user interaction
-    });
-
-    deck.on('prev', function(e) {
-      console.log('The previous slide is #' + (e.index - 1), deck.slides[e.index - 1]);
-      // return false to cancel user interaction
-    });
-
-    deck.on('slide', function(e) {
-      console.log('The requested slide is #' + e.index, e.slide);
-      // return false to cancel user interaction
+    deck.on('prev', function(event) {
+      if(event.index > 0) {
+        var outSlide = event.slide;
+        var inSlide = deck.slides[event.index-1];
+        
+        runTransition(outSlide, inSlide);
+      }
     });
   };
 
