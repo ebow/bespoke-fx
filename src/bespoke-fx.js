@@ -6,194 +6,377 @@
       id: 1,
       group: "move",
       label: "Move to left/ from right",
-			outClass: 'pt-page-moveToLeft',
-			inClass: 'pt-page-moveFromRight'
+      outClass: 'pt-page-moveToLeft',
+      inClass: 'pt-page-moveFromRight'
     },
     "move-to-right-from-left": {
       id: 2,
       group: "move",
       label: "Move to right / from left",
-			outClass: 'pt-page-moveToRight',
-			inClass: 'pt-page-moveFromLeft'
+      outClass: 'pt-page-moveToRight',
+      inClass: 'pt-page-moveFromLeft'
     },
     "move-to-top-from-bottom": {
       id: 3,
       group: "move",
       label: "Move to top / from bottom",
-			outClass: 'pt-page-moveToTop',
-			inClass: 'pt-page-moveFromBottom'
+      outClass: 'pt-page-moveToTop',
+      inClass: 'pt-page-moveFromBottom'
     },
     "move-to-bottom-from-top": {
       id: 4,
       group: "move",
       label: "Move to bottom / from top",
-			outClass: 'pt-page-moveToBottom',
-			inClass: 'pt-page-moveFromTop'
+      outClass: 'pt-page-moveToBottom',
+      inClass: 'pt-page-moveFromTop'
     },
-		
+    
     // Fade
     "fade-from-right": {
       id: 5,
       group: "fade",
       label: "Fade / from right",
-			outClass: 'pt-page-fade',
-			inClass: 'pt-page-moveFromRight pt-page-ontop'
+      outClass: 'pt-page-fade',
+      inClass: 'pt-page-moveFromRight pt-page-ontop'
     },
     "fade-from-left": {
       id: 6,
       group: "fade",
       label: "Fade / from left",
-			outClass: 'pt-page-fade',
-			inClass: 'pt-page-moveFromLeft pt-page-ontop'
+      outClass: 'pt-page-fade',
+      inClass: 'pt-page-moveFromLeft pt-page-ontop'
     },
     "fade-from-bottom": {
       id: 7,
       group: "fade",
       label: "Fade / from bottom",
-			outClass: 'pt-page-fade',
-			inClass: 'pt-page-moveFromBottom pt-page-ontop'
+      outClass: 'pt-page-fade',
+      inClass: 'pt-page-moveFromBottom pt-page-ontop'
     },
     "fade-from-top": {
       id: 8,
       group: "fade",
       label: "Fade / from top"
-			outClass: 'pt-page-fade',
-			inClass: 'pt-page-moveFromTop pt-page-ontop'
+      outClass: 'pt-page-fade',
+      inClass: 'pt-page-moveFromTop pt-page-ontop'
     },
     "fade-left-fade-right": {
       id: 9,
       group: "fade",
       label: "Fade left / Fade right",
-			outClass: 'pt-page-moveToLeftFade',
-			inClass: 'pt-page-moveFromRightFade'
+      outClass: 'pt-page-moveToLeftFade',
+      inClass: 'pt-page-moveFromRightFade'
     },
     "fade-right-fade-left": {
       id: 10,
       group: "fade",
       label: "Fade right / Fade left",
-			outClass: 'pt-page-moveToRightFade',
-			inClass: 'pt-page-moveFromLeftFade'
+      outClass: 'pt-page-moveToRightFade',
+      inClass: 'pt-page-moveFromLeftFade'
     },
     "fade-top-fade-bottom": {
       id: 11,
       group: "fade",
       label: "Fade top / Fade bottom",
-			outClass: 'pt-page-moveToTopFade',
-			inClass: 'pt-page-moveFromBottomFade'
+      outClass: 'pt-page-moveToTopFade',
+      inClass: 'pt-page-moveFromBottomFade'
     },
     "fade-bottom-fade-top": {
       id: 12,
       group: "fade",
       label: "Fade bottom / Fade top",
-			outClass: 'pt-page-moveToBottomFade',
-			inClass: 'pt-page-moveFromTopFade'
+      outClass: 'pt-page-moveToBottomFade',
+      inClass: 'pt-page-moveFromTopFade'
     },
     
     // Different easing
     "different-easing-from-right": {
-      13 Different easing / from right
+      id: 13,
+      group: "different-easing",
+      label: "Different easing / from right"
     },
     "different-easing-from-left": {
-      14 Different easing / from left
+      id: 14,
+      group: "different-easing",
+      label: "Different easing / from left"
     },
     "different-easing-from-bottom": {
-      15 Different easing / from bottom
+      id: 15,
+      group: "different-easing",
+      label: "Different easing / from bottom"
     },
     "different-easing-from-top": {
-      16 Different easing / from top
+      id: 16,
+      group: "different-easing",
+      label: "Different easing / from top"
     },
     
     // Scale
     "scale-down-from-right": {
-      17 Scale down / from right
+      id: 17,
+      group: "scale",
+      label: "Scale down / from right"
     },
     "scale-down-from-left": {
-      18 Scale down / from left
+      id: 18,
+      group: "scale",
+      label: "Scale down / from left"
     },
     "scale-down-from-bottom": {
-      19 Scale down / from bottom
+      id: 19,
+      group: "scale",
+      label: "Scale down / from bottom"
     },
     "scale-down-from-top": {
-      20 Scale down / from top
+      id: 20,
+      group: "scale",
+      label: "Scale down / from top"
     },
     "scale-down-scale-down": {
-      21 Scale down / scale down
+      id: 21,
+      group: "scale",
+      label: "Scale down / scale down"
     },
     "scale-up-scale-up": {
-      22 Scale up / scale up
+      id: 22,
+      group: "scale",
+      label: "Scale up / scale up"
     },
     "move-to-left-scale-up": {
-      23 Move to left / scale up
+      id: 23,
+      group: "scale",
+      label: "Move to left / scale up"
     },
     "move-to-right-scale-up": {
-      24 Move to right / scale up
+      id: 24,
+      group: "scale",
+      label: "Move to right / scale up"
     },
     "move-to-top-scale-up": {
-      25 Move to top / scale up
+      id: 25,
+      group: "scale",
+      label: "Move to top / scale up"
     },
     "move-to-bottom-scale-up": {
-      26 Move to bottom / scale up
+      id: 26,
+      group: "scale",
+      label: "Move to bottom / scale up"
     },
     "scale-down-scale-up": {
-		27 Scale down / scale up
+      id: 27,
+      group: "scale",
+      label: "Scale down / scale up"
     },
     
-    // Rotate
-      Glue
-			28 Glue left / from right
-			29 Glue right / from left
-			30 Glue bottom / from top
-			31 Glue top / from bottom
-      
-      Flip
-			32 Flip right
-			33 Flip left
-			34 Flip top
-			35 Flip bottom
-      
-		36 Fall
-		37 Newspaper
+    // Rotate: Glue
+    "glue-left-from-right": {
+      id: 28,
+      group: "rotate:glue",
+      label: "Glue left / from right"
+    },
+    "glue-right-from-left": {
+      id: 29,
+      group: "rotate:glue",
+      label: "Glue right / from left"
+    },
+    "glue-bottom-from-top": {
+      id: 30,
+      group: "rotate:glue",
+      label: "Glue bottom / from top"
+    },
+    "glue-top-from-bottom": {
+      id: 31,
+      group: "rotate:glue",
+      label: "Glue top / from bottom"
+    },
     
-      Push / Pull
-			38 Push left / from right
-			39 Push right / from left
-			40 Push top / from bottom
-			41 Push bottom / from top
-			42 Push left / pull right
-			43 Push right / pull left
-			44 Push top / pull bottom
-			45 Push bottom / pull top
-      
-      Fold / Unfold
-			46 Fold left / from right
-			47 Fold right / from left
-			48 Fold top / from bottom
-			49 Fold bottom / from top
-			50 Move to right / unfold left
-			51 Move to left / unfold right
-			52 Move to bottom / unfold top
-			53 Move to top / unfold bottom
-      
-      Room
-			54 Room to left
-			55 Room to right
-			56 Room to top
-			57 Room to bottom
-      
-			Cube
-			58 Cube to left
-			59 Cube to right
-			60 Cube to top
-			61 Cube to bottom
-      
-			Carousel
-			62 Carousel to left
-			63 Carousel to right
-			64 Carousel to top
-			65 Carousel to bottom
-    66 Sides
-		67 Slide
+    // Rotate: Flip
+    "flip-right": {
+      id: 32,
+      group: "rotate:flip",
+      label: "Flip right"
+    },
+    "flip-left": {
+      id: 33,
+      group: "rotate:flip",
+      label: "Flip left"
+    },
+    "flip-top": {
+      id: 34,
+      group: "rotate:flip",
+      label: "Flip top"
+    },
+    "flip-bottom": {
+      id: 35,
+      group: "rotate:flip",
+      label: "Flip bottom"
+    },
+    "fall": {
+      id: 36,
+      group: "rotate",
+      label: "Fall"
+    },
+    "newspaper": {
+      id: 37,
+      group: "rotate",
+      label: "Newspaper"
+    },
+    
+    // Push / Pull
+    "push-left-from-right": {
+      id: 38,
+      group: "rotate:push-pull",
+      label: "Push left / from right"
+    },
+    "push-right-from-left": {
+      id: 39,
+      group: "rotate:push-pull",
+      label: "Push right / from left"
+    },
+    "push-top-from-bottom": {
+      id: 40,
+      group: "rotate:push-pull",
+      label: "Push top / from bottom"
+    },
+    "push-bottom-from-top": {
+      id: 41,
+      group: "rotate:push-pull",
+      label: "Push bottom / from top"
+    },
+    "push-left-pull-right": {
+      id: 42,
+      group: "rotate:push-pull",
+      label: "Push left / pull right"
+    },
+    "push-right-pull-left": {
+      id: 43,
+      group: "rotate:push-pull",
+      label: "Push right / pull left"
+    },
+    "push-top-pull-bottom": {
+      id: 44,
+      group: "rotate:push-pull",
+      label: "Push top / pull bottom"
+    },
+    "push-bottom-pull-top": {
+      id: 45,
+      group: "rotate:push-pull",
+      label: "Push bottom / pull top"
     }
+      
+    // Fold / Unfold
+    "fold-left-from-right": {
+      id: 46,
+      group: "rotate:fold-unfold",
+      label: "Fold left / from right"
+    },
+    "fold-right-from-left": {
+      id: 47,
+      group: "rotate:fold-unfold",
+      label: "Fold right / from left"
+    },
+    "fold-top-from-bottom": {
+      id: 48,
+      group: "rotate:fold-unfold",
+      label: "Fold top / from bottom"
+    },
+    "fold-bottom-from-top": {
+      id: 49,
+      group: "rotate:fold-unfold",
+      label: "Fold bottom / from top"
+    },
+    "move-to-right-unfold-left": {
+      id: 50,
+      group: "rotate:fold-unfold",
+      label: "Move to right / unfold left"
+    },
+    "move-to-left-unfold-right": {
+      id: 51,
+      group: "rotate:fold-unfold",
+      label: "Move to left / unfold right"
+    },
+    "move-to-bottom-unfold-top": {
+      id: 52,
+      group: "rotate:fold-unfold",
+      label: "Move to bottom / unfold top"
+    },
+    "move-to-top-unfold-bottom": {
+      id: 53,
+      group: "rotate:fold-unfold",
+      label: "Move to top / unfold bottom"
+    }
+      
+    // Room
+    "room-to-left": {
+      id: 54,
+      group: "rotate:room",
+      label: "Room to left"
+    },
+    "room-to-right": {
+      id: 55,
+      group: "rotate:room",
+      label: "Room to right"
+    },
+    "room-to-top": {
+      id: 56,
+      group: "rotate:room",
+      label: "Room to top"
+    },
+    "room-to-bottom": {
+      id: 57,
+      group: "rotate:room",
+      label: "Room to bottom"
+    }
+      
+    // Cube
+    "cube-to-left": {
+      id: 58,
+      label: "Cube to left"
+    },
+    "cube-to-right": {
+      id: 59,
+      label: "Cube to right"
+    },
+    "cube-to-top": {
+      id: 60,
+      label: "Cube to top"
+    },
+    "cube-to-bottom" {
+      id: 61,
+      label: "Cube to bottom"
+    }
+      
+    // Carousel
+    "carousel-to-left": {
+      id: 62,
+      group: "rotate:carousel",
+      label: "Carousel to left"
+    },
+    "carousel-to-right": {
+      id: 63,
+      group: "rotate:carousel",
+      label: "Carousel to right"
+    },
+    "carousel-to-top": {
+      id: 64,
+      group: "rotate:carousel",
+      label: "Carousel to top"
+    },
+    "carousel-to-bottom": {
+      id: 65,
+      group: "rotate:carousel",
+      label: "Carousel to bottom"
+    }
+    "sides": {
+      id: 66,
+      group: "rotate",
+      label: "Sides"
+    },
+    "slide": {
+      id: 67,
+      label: "Slide"
+    }
+  }
 
 
 
