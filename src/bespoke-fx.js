@@ -228,28 +228,32 @@
         group: "rotate:glue",
         label: "Glue left / from right",
         outClass: 'pt-page-rotateRightSideFirst',
-        inClass: 'pt-page-moveFromRight pt-page-delay200 pt-page-ontop'
+        inClass: 'pt-page-moveFromRight pt-page-delay200 pt-page-ontop',
+        counterpart: "glue-right-from-left"
       },
       "glue-right-from-left": {
         id: 29,
         group: "rotate:glue",
         label: "Glue right / from left",
         outClass: 'pt-page-rotateLeftSideFirst',
-        inClass: 'pt-page-moveFromLeft pt-page-delay200 pt-page-ontop'
+        inClass: 'pt-page-moveFromLeft pt-page-delay200 pt-page-ontop',
+        counterpart: "glue-left-from-right"
       },
       "glue-bottom-from-top": {
         id: 30,
         group: "rotate:glue",
         label: "Glue bottom / from top",
         outClass: 'pt-page-rotateTopSideFirst',
-        inClass: 'pt-page-moveFromTop pt-page-delay200 pt-page-ontop'
+        inClass: 'pt-page-moveFromTop pt-page-delay200 pt-page-ontop',
+        counterpart: "glue-top-from-bottom"
       },
       "glue-top-from-bottom": {
         id: 31,
         group: "rotate:glue",
         label: "Glue top / from bottom",
         outClass: 'pt-page-rotateBottomSideFirst',
-        inClass: 'pt-page-moveFromBottom pt-page-delay200 pt-page-ontop'
+        inClass: 'pt-page-moveFromBottom pt-page-delay200 pt-page-ontop',
+        counterpart: "glue-bottom-from-top"
       },
     
       // Rotate: Flip
@@ -258,42 +262,48 @@
         group: "rotate:flip",
         label: "Flip right",
         outClass: 'pt-page-flipOutRight',
-        inClass: 'pt-page-flipInLeft pt-page-delay500'
+        inClass: 'pt-page-flipInLeft pt-page-delay500',
+        counterpart: "flip-left"
       },
       "flip-left": {
         id: 33,
         group: "rotate:flip",
         label: "Flip left",
         outClass: 'pt-page-flipOutLeft',
-        inClass: 'pt-page-flipInRight pt-page-delay500'
+        inClass: 'pt-page-flipInRight pt-page-delay500',
+        counterpart: "flip-right"
       },
       "flip-top": {
         id: 34,
         group: "rotate:flip",
         label: "Flip top",
         outClass: 'pt-page-flipOutTop',
-        inClass: 'pt-page-flipInBottom pt-page-delay500'
+        inClass: 'pt-page-flipInBottom pt-page-delay500',
+        counterpart: "flip-bottom"
       },
       "flip-bottom": {
         id: 35,
         group: "rotate:flip",
         label: "Flip bottom",
         outClass: 'pt-page-flipOutBottom',
-        inClass: 'pt-page-flipInTop pt-page-delay500'
+        inClass: 'pt-page-flipInTop pt-page-delay500',
+        counterpart: "flip-top"
       },
       "fall": {
         id: 36,
         group: "rotate",
         label: "Fall",
         outClass: 'pt-page-rotateFall pt-page-ontop',
-        inClass: 'pt-page-scaleUp'
+        inClass: 'pt-page-scaleUp',
+        counterpart: "fall"
       },
       "newspaper": {
         id: 37,
         group: "rotate",
         label: "Newspaper",
         outClass: 'pt-page-rotateOutNewspaper',
-        inClass: 'pt-page-rotateInNewspaper pt-page-delay500'
+        inClass: 'pt-page-rotateInNewspaper pt-page-delay500',
+        counterpart: "newspaper"
       },
     
       // Push / Pull
@@ -302,56 +312,64 @@
         group: "rotate:push-pull",
         label: "Push left / from right",
         outClass: 'pt-page-rotatePushLeft',
-        inClass: 'pt-page-moveFromRight'
+        inClass: 'pt-page-moveFromRight',
+        counterpart: "push-right-from-left"
       },
       "push-right-from-left": {
         id: 39,
         group: "rotate:push-pull",
         label: "Push right / from left",
         outClass: 'pt-page-rotatePushRight',
-        inClass: 'pt-page-moveFromLeft'
+        inClass: 'pt-page-moveFromLeft',
+        counterpart: "push-left-from-right"
       },
       "push-top-from-bottom": {
         id: 40,
         group: "rotate:push-pull",
         label: "Push top / from bottom",
         outClass: 'pt-page-rotatePushTop',
-        inClass: 'pt-page-moveFromBottom'
+        inClass: 'pt-page-moveFromBottom',
+        counterpart: "push-bottom-from-top"
       },
       "push-bottom-from-top": {
         id: 41,
         group: "rotate:push-pull",
         label: "Push bottom / from top",
         outClass: 'pt-page-rotatePushBottom',
-        inClass: 'pt-page-moveFromTop'
+        inClass: 'pt-page-moveFromTop',
+        counterpart: "push-top-from-bottom"
       },
       "push-left-pull-right": {
         id: 42,
         group: "rotate:push-pull",
         label: "Push left / pull right",
         outClass: 'pt-page-rotatePushLeft',
-        inClass: 'pt-page-rotatePullRight pt-page-delay180'
+        inClass: 'pt-page-rotatePullRight pt-page-delay180',
+        counterpart: "push-right-pull-left"
       },
       "push-right-pull-left": {
         id: 43,
         group: "rotate:push-pull",
         label: "Push right / pull left",
         outClass: 'pt-page-rotatePushRight',
-        inClass: 'pt-page-rotatePullLeft pt-page-delay180'
+        inClass: 'pt-page-rotatePullLeft pt-page-delay180',
+        counterpart: "push-left-pull-right"
       },
       "push-top-pull-bottom": {
         id: 44,
         group: "rotate:push-pull",
         label: "Push top / pull bottom",
         outClass: 'pt-page-rotatePushTop',
-        inClass: 'pt-page-rotatePullBottom pt-page-delay180'
+        inClass: 'pt-page-rotatePullBottom pt-page-delay180',
+        counterpart: "push-bottom-pull-top"
       },
       "push-bottom-pull-top": {
         id: 45,
         group: "rotate:push-pull",
         label: "Push bottom / pull top",
         outClass: 'pt-page-rotatePushBottom',
-        inClass: 'pt-page-rotatePullTop pt-page-delay180'
+        inClass: 'pt-page-rotatePullTop pt-page-delay180',
+        counterpart: "push-top-pull-bottom"
       },
       
       // Fold / Unfold
@@ -360,56 +378,64 @@
         group: "rotate:fold-unfold",
         label: "Fold left / from right",
         outClass: 'pt-page-rotateFoldLeft',
-        inClass: 'pt-page-moveFromRightFade'
+        inClass: 'pt-page-moveFromRightFade',
+        counterpart: "move-to-right-unfold-left"
       },
       "fold-right-from-left": {
         id: 47,
         group: "rotate:fold-unfold",
         label: "Fold right / from left",
         outClass: 'pt-page-rotateFoldRight',
-        inClass: 'pt-page-moveFromLeftFade'
+        inClass: 'pt-page-moveFromLeftFade',
+        counterpart: "move-to-left-unfold-right"
       },
       "fold-top-from-bottom": {
         id: 48,
         group: "rotate:fold-unfold",
         label: "Fold top / from bottom",
         outClass: 'pt-page-rotateFoldTop',
-        inClass: 'pt-page-moveFromBottomFade'
+        inClass: 'pt-page-moveFromBottomFade',
+        counterpart: "move-to-bottom-unfold-top"
       },
       "fold-bottom-from-top": {
         id: 49,
         group: "rotate:fold-unfold",
         label: "Fold bottom / from top",
         outClass: 'pt-page-rotateFoldBottom',
-        inClass: 'pt-page-moveFromTopFade'
+        inClass: 'pt-page-moveFromTopFade',
+        counterpart: "move-to-top-unfold-bottom"
       },
       "move-to-right-unfold-left": {
         id: 50,
         group: "rotate:fold-unfold",
         label: "Move to right / unfold left",
         outClass: 'pt-page-moveToRightFade',
-        inClass: 'pt-page-rotateUnfoldLeft'
+        inClass: 'pt-page-rotateUnfoldLeft',
+        counterpart: "fold-left-from-right"
       },
       "move-to-left-unfold-right": {
         id: 51,
         group: "rotate:fold-unfold",
         label: "Move to left / unfold right",
         outClass: 'pt-page-moveToLeftFade',
-        inClass: 'pt-page-rotateUnfoldRight'
+        inClass: 'pt-page-rotateUnfoldRight',
+        counterpart: "fold-right-from-left"
       },
       "move-to-bottom-unfold-top": {
         id: 52,
         group: "rotate:fold-unfold",
         label: "Move to bottom / unfold top",
         outClass: 'pt-page-moveToBottomFade',
-        inClass: 'pt-page-rotateUnfoldTop'
+        inClass: 'pt-page-rotateUnfoldTop',
+        counterpart: "fold-top-from-bottom"
       },
       "move-to-top-unfold-bottom": {
         id: 53,
         group: "rotate:fold-unfold",
         label: "Move to top / unfold bottom",
         outClass: 'pt-page-moveToTopFade',
-        inClass: 'pt-page-rotateUnfoldBottom'
+        inClass: 'pt-page-rotateUnfoldBottom',
+        counterpart: "fold-bottom-from-top"
       },
       
       // Room
@@ -418,28 +444,32 @@
         group: "rotate:room",
         label: "Room to left",
         outClass: 'pt-page-rotateRoomLeftOut pt-page-ontop',
-        inClass: 'pt-page-rotateRoomLeftIn'
+        inClass: 'pt-page-rotateRoomLeftIn',
+        counterpart: "room-to-right"
       },
       "room-to-right": {
         id: 55,
         group: "rotate:room",
         label: "Room to right",
         outClass: 'pt-page-rotateRoomRightOut pt-page-ontop',
-        inClass: 'pt-page-rotateRoomRightIn'
+        inClass: 'pt-page-rotateRoomRightIn',
+        counterpart: "room-to-left"
       },
       "room-to-top": {
         id: 56,
         group: "rotate:room",
         label: "Room to top",
         outClass: 'pt-page-rotateRoomTopOut pt-page-ontop',
-        inClass: 'pt-page-rotateRoomTopIn'
+        inClass: 'pt-page-rotateRoomTopIn',
+        counterpart: "room-to-bottom"
       },
       "room-to-bottom": {
         id: 57,
         group: "rotate:room",
         label: "Room to bottom",
         outClass: 'pt-page-rotateRoomBottomOut pt-page-ontop',
-        inClass: 'pt-page-rotateRoomBottomIn'
+        inClass: 'pt-page-rotateRoomBottomIn',
+        counterpart: "room-to-top"
       },
       
       // Cube
@@ -478,41 +508,47 @@
         group: "rotate:carousel",
         label: "Carousel to left",
         outClass: 'pt-page-rotateCarouselLeftOut pt-page-ontop',
-        inClass: 'pt-page-rotateCarouselLeftIn'
+        inClass: 'pt-page-rotateCarouselLeftIn',
+        counterpart: "carousel-to-right"
       },
       "carousel-to-right": {
         id: 63,
         group: "rotate:carousel",
         label: "Carousel to right",
         outClass: 'pt-page-rotateCarouselRightOut pt-page-ontop',
-        inClass: 'pt-page-rotateCarouselRightIn'
+        inClass: 'pt-page-rotateCarouselRightIn',
+        counterpart: "carousel-to-left"
       },
       "carousel-to-top": {
         id: 64,
         group: "rotate:carousel",
         label: "Carousel to top",
         outClass: 'pt-page-rotateCarouselTopOut pt-page-ontop',
-        inClass: 'pt-page-rotateCarouselTopIn'
+        inClass: 'pt-page-rotateCarouselTopIn',
+        counterpart: "carousel-to-bottom"
       },
       "carousel-to-bottom": {
         id: 65,
         group: "rotate:carousel",
         label: "Carousel to bottom",
         outClass: 'pt-page-rotateCarouselBottomOut pt-page-ontop',
-        inClass: 'pt-page-rotateCarouselBottomIn'
+        inClass: 'pt-page-rotateCarouselBottomIn',
+        counterpart: "carousel-to-top"
       },
       "sides": {
         id: 66,
         group: "rotate",
         label: "Sides",
         outClass: 'pt-page-rotateSidesOut',
-        inClass: 'pt-page-rotateSidesIn pt-page-delay200'
+        inClass: 'pt-page-rotateSidesIn pt-page-delay200',
+        counterpart: "sides"
       },
       "slide": {
         id: 67,
         label: "Slide",
         outClass: 'pt-page-rotateSlideOut',
-        inClass: 'pt-page-rotateSlideIn'
+        inClass: 'pt-page-rotateSlideIn',
+        counterpart: "slide"
       }
     };
     
