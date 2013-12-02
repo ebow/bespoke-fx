@@ -13,30 +13,34 @@
       "move-to-left-from-right": {
         id: 1,
         group: "move",
-        label: "Move to left/ from right",
+        label: "Move to left / from right",
         outClass: 'pt-page-moveToLeft',
-        inClass: 'pt-page-moveFromRight'
+        inClass: 'pt-page-moveFromRight',
+        counterpart: "move-to-right-from-left"
       },
       "move-to-right-from-left": {
         id: 2,
         group: "move",
         label: "Move to right / from left",
         outClass: 'pt-page-moveToRight',
-        inClass: 'pt-page-moveFromLeft'
+        inClass: 'pt-page-moveFromLeft',
+        counterpart: "move-to-left-from-right"
       },
       "move-to-top-from-bottom": {
         id: 3,
         group: "move",
         label: "Move to top / from bottom",
         outClass: 'pt-page-moveToTop',
-        inClass: 'pt-page-moveFromBottom'
+        inClass: 'pt-page-moveFromBottom',
+        counterpart: "move-to-bottom-from-top"
       },
       "move-to-bottom-from-top": {
         id: 4,
         group: "move",
         label: "Move to bottom / from top",
         outClass: 'pt-page-moveToBottom',
-        inClass: 'pt-page-moveFromTop'
+        inClass: 'pt-page-moveFromTop',
+        counterpart: "move-to-top-from-bottom"
       },
     
       // Fade
