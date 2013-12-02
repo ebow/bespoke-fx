@@ -115,28 +115,32 @@
         group: "different-easing",
         label: "Different easing / from right",
         outClass: 'pt-page-moveToLeftEasing pt-page-ontop',
-        inClass: 'pt-page-moveFromRight'
+        inClass: 'pt-page-moveFromRight',
+        counterpart: "different-easing-from-left"
       },
       "different-easing-from-left": {
         id: 14,
         group: "different-easing",
         label: "Different easing / from left",
         outClass: 'pt-page-moveToRightEasing pt-page-ontop',
-        inClass: 'pt-page-moveFromLeft'
+        inClass: 'pt-page-moveFromLeft',
+        counterpart: "different-easing-from-right"
       },
       "different-easing-from-bottom": {
         id: 15,
         group: "different-easing",
         label: "Different easing / from bottom",
         outClass: 'pt-page-moveToTopEasing pt-page-ontop',
-        inClass: 'pt-page-moveFromBottom'
+        inClass: 'pt-page-moveFromBottom',
+        counterpart: "different-easing-from-top"
       },
       "different-easing-from-top": {
         id: 16,
         group: "different-easing",
         label: "Different easing / from top",
         outClass: 'pt-page-moveToBottomEasing pt-page-ontop',
-        inClass: 'pt-page-moveFromTop'
+        inClass: 'pt-page-moveFromTop',
+        counterpart: "different-easing-from-bottom"
       },
     
       // Scale
