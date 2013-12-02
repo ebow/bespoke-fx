@@ -49,56 +49,64 @@
         group: "fade",
         label: "Fade / from right",
         outClass: 'pt-page-fade',
-        inClass: 'pt-page-moveFromRight pt-page-ontop'
+        inClass: 'pt-page-moveFromRight pt-page-ontop',
+        counterpart: "fade-from-left"
       },
       "fade-from-left": {
         id: 6,
         group: "fade",
         label: "Fade / from left",
         outClass: 'pt-page-fade',
-        inClass: 'pt-page-moveFromLeft pt-page-ontop'
+        inClass: 'pt-page-moveFromLeft pt-page-ontop',
+        counterpart: "fade-from-right"
       },
       "fade-from-bottom": {
         id: 7,
         group: "fade",
         label: "Fade / from bottom",
         outClass: 'pt-page-fade',
-        inClass: 'pt-page-moveFromBottom pt-page-ontop'
+        inClass: 'pt-page-moveFromBottom pt-page-ontop',
+        counterpart: "fade-from-top"
       },
       "fade-from-top": {
         id: 8,
         group: "fade",
         label: "Fade / from top",
         outClass: 'pt-page-fade',
-        inClass: 'pt-page-moveFromTop pt-page-ontop'
+        inClass: 'pt-page-moveFromTop pt-page-ontop',
+        counterpart: "fade-from-bottom"
       },
       "fade-left-fade-right": {
         id: 9,
         group: "fade",
         label: "Fade left / Fade right",
         outClass: 'pt-page-moveToLeftFade',
-        inClass: 'pt-page-moveFromRightFade'
+        inClass: 'pt-page-moveFromRightFade',
+        counterpart: "fade-right-fade-left"
       },
       "fade-right-fade-left": {
         id: 10,
         group: "fade",
         label: "Fade right / Fade left",
         outClass: 'pt-page-moveToRightFade',
-        inClass: 'pt-page-moveFromLeftFade'
+        inClass: 'pt-page-moveFromLeftFade',
+        counterpart: "fade-left-fade-right"
       },
       "fade-top-fade-bottom": {
         id: 11,
         group: "fade",
         label: "Fade top / Fade bottom",
         outClass: 'pt-page-moveToTopFade',
-        inClass: 'pt-page-moveFromBottomFade'
+        inClass: 'pt-page-moveFromBottomFade',
+        counterpart: "fade-bottom-fade-top"
       },
       "fade-bottom-fade-top": {
         id: 12,
         group: "fade",
         label: "Fade bottom / Fade top",
         outClass: 'pt-page-moveToBottomFade',
-        inClass: 'pt-page-moveFromTopFade'
+        inClass: 'pt-page-moveFromTopFade',
+        counterpart: "fade-top-fade-bottom"
       },
     
       // Different easing
