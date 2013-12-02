@@ -447,25 +447,29 @@
         id: 58,
         label: "Cube to left",
         outClass: 'pt-page-rotateCubeLeftOut pt-page-ontop',
-        inClass: 'pt-page-rotateCubeLeftIn'
+        inClass: 'pt-page-rotateCubeLeftIn',
+        counterpart: "cube-to-right"
       },
       "cube-to-right": {
         id: 59,
         label: "Cube to right",
         outClass: 'pt-page-rotateCubeRightOut pt-page-ontop',
-        inClass: 'pt-page-rotateCubeRightIn'
+        inClass: 'pt-page-rotateCubeRightIn',
+        counterpart: "cube-to-left"
       },
       "cube-to-top": {
         id: 60,
         label: "Cube to top",
         outClass: 'pt-page-rotateCubeTopOut pt-page-ontop',
-        inClass: 'pt-page-rotateCubeTopIn'
+        inClass: 'pt-page-rotateCubeTopIn',
+        counterpart: "cube-to-bottom"
       },
       "cube-to-bottom": {
         id: 61,
         label: "Cube to bottom",
         outClass: 'pt-page-rotateCubeBottomOut pt-page-ontop',
-        inClass: 'pt-page-rotateCubeBottomIn'
+        inClass: 'pt-page-rotateCubeBottomIn',
+        counterpart: "cube-to-top"
       },
       
       // Carousel
