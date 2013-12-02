@@ -47,6 +47,7 @@ require('bespoke-fx');
 ## Credits
 
 This plugin was built with [generator-bespokeplugin](https://github.com/markdalgleish/generator-bespokeplugin).
+Inspired by a [Codrops article](http://tympanus.net/codrops/2013/05/07/a-collection-of-page-transitions/) ([see demo](http://tympanus.net/Development/PageTransitions/))
 
 ## License
 
