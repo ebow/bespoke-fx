@@ -149,77 +149,88 @@
         group: "scale",
         label: "Scale down / from right",
         outClass: 'pt-page-scaleDown',
-        inClass: 'pt-page-moveFromRight pt-page-ontop'
+        inClass: 'pt-page-moveFromRight pt-page-ontop',
+        counterpart: "move-to-right-scale-up"
       },
       "scale-down-from-left": {
         id: 18,
         group: "scale",
         label: "Scale down / from left",
         outClass: 'pt-page-scaleDown',
-        inClass: 'pt-page-moveFromLeft pt-page-ontop'
+        inClass: 'pt-page-moveFromLeft pt-page-ontop',
+        counterpart: "move-to-left-scale-up"
       },
       "scale-down-from-bottom": {
         id: 19,
         group: "scale",
         label: "Scale down / from bottom",
         outClass: 'pt-page-scaleDown',
-        inClass: 'pt-page-moveFromBottom pt-page-ontop'
+        inClass: 'pt-page-moveFromBottom pt-page-ontop',
+        counterpart: "move-to-bottom-scale-up"
       },
       "scale-down-from-top": {
         id: 20,
         group: "scale",
         label: "Scale down / from top",
         outClass: 'pt-page-scaleDown',
-        inClass: 'pt-page-moveFromTop pt-page-ontop'
+        inClass: 'pt-page-moveFromTop pt-page-ontop',
+        counterpart: "move-to-top-scale-up"
       },
       "scale-down-scale-down": {
         id: 21,
         group: "scale",
         label: "Scale down / scale down",
         outClass: 'pt-page-scaleDown',
-        inClass: 'pt-page-scaleUpDown pt-page-delay300'
+        inClass: 'pt-page-scaleUpDown pt-page-delay300',
+        counterpart: "scale-up-scale-up"
       },
       "scale-up-scale-up": {
         id: 22,
         group: "scale",
         label: "Scale up / scale up",
         outClass: 'pt-page-scaleDownUp',
-        inClass: 'pt-page-scaleUp pt-page-delay300'
+        inClass: 'pt-page-scaleUp pt-page-delay300',
+        counterpart: "scale-down-scale-down"
       },
       "move-to-left-scale-up": {
         id: 23,
         group: "scale",
         label: "Move to left / scale up",
         outClass: 'pt-page-moveToLeft pt-page-ontop',
-        inClass: 'pt-page-scaleUp'
+        inClass: 'pt-page-scaleUp',
+        counterpart: "scale-down-from-left"
       },
       "move-to-right-scale-up": {
         id: 24,
         group: "scale",
         label: "Move to right / scale up",
         outClass: 'pt-page-moveToRight pt-page-ontop',
-        inClass: 'pt-page-scaleUp'
+        inClass: 'pt-page-scaleUp',
+        counterpart: "scale-down-from-right"
       },
       "move-to-top-scale-up": {
         id: 25,
         group: "scale",
         label: "Move to top / scale up",
         outClass: 'pt-page-moveToTop pt-page-ontop',
-        inClass: 'pt-page-scaleUp'
+        inClass: 'pt-page-scaleUp',
+        counterpart: "scale-down-from-top"
       },
       "move-to-bottom-scale-up": {
         id: 26,
         group: "scale",
         label: "Move to bottom / scale up",
         outClass: 'pt-page-moveToBottom pt-page-ontop',
-        inClass: 'pt-page-scaleUp'
+        inClass: 'pt-page-scaleUp',
+        counterpart: "scale-down-from-bottom"
       },
       "scale-down-scale-up": {
         id: 27,
         group: "scale",
         label: "Scale down / scale up",
         outClass: 'pt-page-scaleDownCenter',
-        inClass: 'pt-page-scaleUpCenter pt-page-delay400'
+        inClass: 'pt-page-scaleUpCenter pt-page-delay400',
+        counterpart: "scale-down-scale-up"
       },
     
       // Rotate: Glue
