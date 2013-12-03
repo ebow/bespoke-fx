@@ -1,3 +1,6 @@
 bespoke.horizontal.from('article', {
-  fx: true
+  fx: {
+    axis: "X",
+    transition: "slide"
+  }
 });
