@@ -687,16 +687,19 @@
       
       outSlide.addEventListener(animEndEventName, function(event) {
         event.target.classList.remove(outClass);
+        event.target.classList.remove("fx-transitioning-out");
       });
       
       inSlide.addEventListener(animEndEventName, function(event) {
         event.target.classList.remove(inClass);
+        event.target.classList.remove("fx-transitioning-in");
         // event.target.classList.add('pt-page-current');
-        deck[directive]({transition_complete: true});
       });
       
       outSlide.classList.add(outClass);
+      outSlide.classList.add("fx-transitioning-out");
       inSlide.classList.add(inClass);
+      inSlide.classList.add("fx-transitioning-in");
     };
     
     /*
@@ -704,26 +707,20 @@
        https://github.com/markdalgleish/bespoke.js#events
     */
     deck.on('next', function(event) {
-      console.log('next: transition_complete' + event.transition_complete);
-      
-      if(event.index < deck.slides.length-1 && !event.transition_complete) {
+      if(event.index < deck.slides.length-1) {
         var outSlide = event.slide;
         var inSlide = deck.slides[event.index+1];
         
         runTransition(outSlide, inSlide, 'next');
-        return false;
       }
     });
 
     deck.on('prev', function(event) {
-      console.log('prev: transition_complete' + event.transition_complete);
-      
       if(event.index > 0 && !event.transition_complete) {
         var outSlide = event.slide;
         var inSlide = deck.slides[event.index-1];
         
         runTransition(outSlide, inSlide, 'prev');
-        return false;
       }
     });
   };
