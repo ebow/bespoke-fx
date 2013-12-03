@@ -680,26 +680,35 @@
 		// animation end event name
 		var animEndEventName = animEndEventNames[ Modernizr.prefixed( 'animation' ) ];
     
+    var addClassNames = function(element, classNames) {
+      var names = classNames.split(" ");
+      for(var i = 0; i < names.length; i++) {
+        element.classList.add(names[i]);
+      }
+    };
+    
+    var removeClassNames = function(element, classNames) {
+      var names = classNames.split(" ");
+      for(var i = 0; i < names.length; i++) {
+        element.classList.remove(names[i]);
+      }
+    };
+    
     var runTransition = function(outSlide, inSlide, directive) {
       var transition_name = default_fx[directive]; // fx[transition][axis][directive];
       var outClass = animations[transition_name].outClass;
       var inClass = animations[transition_name].inClass;
       
       outSlide.addEventListener(animEndEventName, function(event) {
-        event.target.classList.remove(outClass);
-        event.target.classList.remove("fx-transitioning-out");
+        removeClassNames(event.target, outClass + " fx-transitioning-out");
       });
       
       inSlide.addEventListener(animEndEventName, function(event) {
-        event.target.classList.remove(inClass);
-        event.target.classList.remove("fx-transitioning-in");
-        // event.target.classList.add('pt-page-current');
+        removeClassNames(event.target, inClass + " fx-transitioning-in");
       });
       
-      outSlide.classList.add(outClass);
-      outSlide.classList.add("fx-transitioning-out");
-      inSlide.classList.add(inClass);
-      inSlide.classList.add("fx-transitioning-in");
+      addClassNames(outSlide, outClass + " fx-transitioning-out");
+      addClassNames(inSlide, inClass + " fx-transitioning-in");
     };
     
     /*
