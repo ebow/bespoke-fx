@@ -9,6 +9,108 @@
 (function(bespoke) {
   bespoke.plugins.fx = function(deck) {
     var fx = {
+      "move": {
+        "X": { "next": "move-to-left-from-right",
+               "prev": "move-to-right-from-left" },
+        "Y": { "next": "move-to-top-from-bottom",
+               "prev": "move-to-bottom-from-top" }},
+      "fade": {
+        "X": { "next": "fade-from-right",
+               "prev": "fade-from-left" },
+        "Y": { "next": "fade-from-bottom",
+               "prev": "fade-from-top" }},
+      "fade-slide": {
+        "X": { "next": "fade-left-fade-right",
+               "prev": "fade-right-fade-left" },
+        "Y": { "next": "fade-top-fade-bottom",
+               "prev": "fade-bottom-fade-top" }},
+      "different-easing": {
+        "X": { "next": "different-easing-from-right",
+               "prev": "different-easing-from-left" },
+        "Y": { "next": "different-easing-from-bottom",
+               "prev": "different-easing-from-top" }},
+      "scale-down": {
+        "X": { "next": "scale-down-from-right",
+               "prev": "scale-down-from-left" },
+        "Y": { "next": "scale-down-from-bottom",
+               "prev": "scale-down-from-top" }},
+      "zoom": {
+        "X": { "next": "scale-up-scale-up",
+               "prev": "scale-down-scale-down" },
+        "Y": { "next": "scale-up-scale-up",
+               "prev": "scale-down-scale-down" }},
+        
+       // SCALE
+
+
+      "glue": {
+        "X": { "next": "glue-left-from-right",
+               "prev": "glue-right-from-left" },
+        "Y": { "next": "glue-top-from-bottom",
+               "prev": "glue-bottom-from-top" }},
+      "flip": {
+        "X": { "next": "flip-left",
+               "prev": "flip-right" },
+        "Y": { "next": "flip-top",
+               "prev": "flip-bottom" }},
+      "fall": {
+        "X": { "next": "fall",
+               "prev": "fall" },
+        "Y": { "next": "fall",
+               "prev": "fall" }},
+      "newspaper": {
+        "X": { "next": "newspaper",
+               "prev": "newspaper" },
+        "Y": { "next": "newspaper",
+               "prev": "newspaper" }},
+      "push": {
+        "X": { "next": "push-left-from-right",
+               "prev": "push-right-from-left" },
+        "Y": { "next": "push-top-from-bottom",
+               "prev": "push-bottom-from-top" }},
+      "pull": {
+        "X": { "next": "push-left-pull-right",
+               "prev": "push-right-pull-left" },
+        "Y": { "next": "push-bottom-pull-top",
+               "prev": "push-top-pull-bottom" }},
+      "fold": {
+        "X": { "next": "fold-left-from-right",
+               "prev": "move-to-right-unfold-left" },
+        "Y": { "next": "fold-bottom-from-top",
+               "prev": "move-to-top-unfold-bottom" }},
+      "unfold": {
+        "X": { "next": "move-to-left-unfold-right",
+               "prev": "fold-right-from-left" },
+        "Y": { "next": "move-to-bottom-unfold-top",
+               "prev": "fold-top-from-bottom" }},
+      "room": {
+        "X": { "next": "room-to-left",
+               "prev": "room-to-right" },
+        "Y": { "next": "room-to-bottom",
+               "prev": "room-to-top" }},
+      "cube": {
+        "X": { "next": "cube-to-left",
+               "prev": "cube-to-right" },
+        "Y": { "next": "cube-to-bottom",
+               "prev": "cube-to-top" }},
+      "carousel": {
+        "X": { "next": "carousel-to-left",
+               "prev": "carousel-to-right" },
+        "Y": { "next": "carousel-to-bottom",
+               "prev": "carousel-to-top" }},
+      "sides": {
+        "X": { "next": "sides",
+               "prev": "sides" },
+        "Y": { "next": "sides",
+               "prev": "sides" }},
+      "slide": {
+        "X": { "next": "slide",
+               "prev": "slide" },
+        "Y": { "next": "slide",
+               "prev": "slide" }}
+      };
+    
+    var fx_lib = {
       // Move
       "move-to-left-from-right": {
         id: 1,
