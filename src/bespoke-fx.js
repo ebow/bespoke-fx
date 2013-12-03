@@ -7,7 +7,9 @@
  */
 
 (function(bespoke) {
-  bespoke.plugins.fx = function(deck) {
+  bespoke.plugins.fx = function(deck, options) {
+    var axis = options.axis ? options.axis : "X";
+    var transition = options.transition ? options.transition : "move";
     var fx = {
       "move": {
         "X": { "next": "move-to-left-from-right",
@@ -110,7 +112,7 @@
                "prev": "slide" }}
       };
     
-    var fx_lib = {
+    var animations = {
       // Move
       "move-to-left-from-right": {
         id: 1,
@@ -665,6 +667,9 @@
       }
     };
     
+    var default_fx = fx[transition][axis];
+    
+    // Browser compatibility
 		var animEndEventNames = {
 			'WebkitAnimation' : 'webkitAnimationEnd',
 			'OAnimation' : 'oAnimationEnd',
@@ -675,9 +680,10 @@
 		// animation end event name
 		var animEndEventName = animEndEventNames[ Modernizr.prefixed( 'animation' ) ];
     
-    var runTransition = function(outSlide, inSlide) {
-      var outClass = "pt-page-rotateSlideOut";
-      var inClass = "pt-page-rotateSlideIn";
+    var runTransition = function(outSlide, inSlide, directive) {
+      var transition_name = default_fx[directive]; // fx[transition][axis][directive];
+      var outClass = animations[transition_name].outClass;
+      var inClass = animations[transition_name].inClass;
       
       outSlide.addEventListener(animEndEventName, function(event) {
         event.target.classList.remove(outClass);
@@ -685,7 +691,8 @@
       
       inSlide.addEventListener(animEndEventName, function(event) {
         event.target.classList.remove(inClass);
-        event.target.classList.add('pt-page-current');
+        // event.target.classList.add('pt-page-current');
+        deck[directive]({transition_complete: true});
       });
       
       outSlide.classList.add(outClass);
@@ -697,20 +704,26 @@
        https://github.com/markdalgleish/bespoke.js#events
     */
     deck.on('next', function(event) {
-      if(event.index < deck.slides.length-1) {
+      console.log('next: transition_complete' + event.transition_complete);
+      
+      if(event.index < deck.slides.length-1 && !event.transition_complete) {
         var outSlide = event.slide;
         var inSlide = deck.slides[event.index+1];
         
-        runTransition(outSlide, inSlide);
+        runTransition(outSlide, inSlide, 'next');
+        return false;
       }
     });
 
     deck.on('prev', function(event) {
-      if(event.index > 0) {
+      console.log('prev: transition_complete' + event.transition_complete);
+      
+      if(event.index > 0 && !event.transition_complete) {
         var outSlide = event.slide;
         var inSlide = deck.slides[event.index-1];
         
-        runTransition(outSlide, inSlide);
+        runTransition(outSlide, inSlide, 'prev');
+        return false;
       }
     });
   };
