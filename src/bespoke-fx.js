@@ -8,8 +8,13 @@
 
 (function(bespoke) {
   bespoke.plugins.fx = function(deck, options) {
+    
+    var getAxisFromDirection = function(direction) {
+      return direction == 'vertical' ? "Y" : "X";
+    }
+    
     var direction = options.direction ? options.direction : "horizontal";
-    var axis = direction == 'vertical' ? "Y" : "X";
+    var default_axis = getAxisFromDirection(direction);
     var transition = options.transition ? options.transition : "move";
     var reverse = options.reverse ? options.reverse : false;
     
@@ -676,7 +681,7 @@
       }
     };
     
-    var default_fx = fx[transition][axis];
+    var default_fx = fx[transition][default_axis];
     
     // Browser compatibility
 		var animEndEventNames = {
@@ -703,14 +708,21 @@
       }
     };
     
+    var getAxisFromDirection = function(direction) {
+      return direction == 'vertical' ? "Y" : "X";
+    }
+    
     var runTransition = function(outSlide, inSlide, directive) {
       var slide_transition_name = inSlide.getAttribute('data-bespoke-fx-transition');
-      var slide_transition = slide_transition_name ? fx[slide_transition_name][axis] : default_fx;
+      
+      var axis = inSlide.getAttribute('data-bespoke-fx-direction') ?
+        getAxisFromDirection(inSlide.getAttribute('data-bespoke-fx-direction')) : default_axis;
       
       if(reverse || inSlide.getAttribute('data-bespoke-fx-reverse') === "true") {
         directive = directive === "next" ? "prev" : "next";
       }
       
+      var slide_transition = slide_transition_name ? fx[slide_transition_name][axis] : fx[transition][axis];
       var transition_name = slide_transition[directive];
       
       var outClass = animations[transition_name].outClass;
