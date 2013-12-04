@@ -11,6 +11,7 @@
     var direction = options.direction ? options.direction : "horizontal";
     var axis = direction == 'vertical' ? "Y" : "X";
     var transition = options.transition ? options.transition : "move";
+    var reverse = options.reverse ? options.reverse : false;
     
     var fx = {
       "move": {
@@ -705,6 +706,11 @@
     var runTransition = function(outSlide, inSlide, directive) {
       var slide_transition_name = inSlide.getAttribute('data-bespoke-fx-transition');
       var slide_transition = slide_transition_name ? fx[slide_transition_name][axis] : default_fx;
+      
+      if(reverse) {
+        directive = directive === "next" ? "prev" : "next";
+      }
+      
       var transition_name = slide_transition[directive];
       
       var outClass = animations[transition_name].outClass;
