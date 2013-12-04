@@ -1,6 +1,6 @@
 bespoke.horizontal.from('article', {
   fx: {
-    axis: "X",
+    direction: "horizontal",
     transition: "glue"
   }
 });

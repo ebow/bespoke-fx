@@ -8,7 +8,9 @@
 
 (function(bespoke) {
   bespoke.plugins.fx = function(deck, options) {
-    var axis = options.axis ? options.axis : "X";
+    var direction = options.direction ? options.direction : "horizontal";
+    var axis = direction == 'vertical' ? "Y" : "X";
+    
     var transition = options.transition ? options.transition : "move";
     var fx = {
       "move": {
@@ -711,10 +713,6 @@
       addClassNames(inSlide, inClass + " fx-transitioning-in");
     };
     
-    /*
-       Handle events
-       https://github.com/markdalgleish/bespoke.js#events
-    */
     deck.on('next', function(event) {
       if(event.index < deck.slides.length-1) {
         var outSlide = event.slide;
