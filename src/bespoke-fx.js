@@ -18,35 +18,41 @@
                "prev": "move-to-right-from-left" },
         "Y": { "next": "move-to-top-from-bottom",
                "prev": "move-to-bottom-from-top" }},
-      "fade": {
+      "move-fade": {
         "X": { "next": "fade-from-right",
                "prev": "fade-from-left" },
         "Y": { "next": "fade-from-bottom",
                "prev": "fade-from-top" }},
-      "fade-slide": {
+      "move-both-fade": {
         "X": { "next": "fade-left-fade-right",
                "prev": "fade-right-fade-left" },
         "Y": { "next": "fade-top-fade-bottom",
                "prev": "fade-bottom-fade-top" }},
-      "different-easing": {
+      "move-different-easing": {
         "X": { "next": "different-easing-from-right",
                "prev": "different-easing-from-left" },
         "Y": { "next": "different-easing-from-bottom",
                "prev": "different-easing-from-top" }},
-      "scale-down": {
+      "scale-down-out-move-in": {
         "X": { "next": "scale-down-from-right",
-               "prev": "scale-down-from-left" },
+               "prev": "move-to-right-scale-up" },
         "Y": { "next": "scale-down-from-bottom",
+               "prev": "move-to-bottom-scale-up" }},
+      "move-out-scale-up": {
+        "X": { "next": "move-to-left-scale-up",
+               "prev": "scale-down-from-left" },
+        "Y": { "next": "move-to-top-scale-up",
                "prev": "scale-down-from-top" }},
-      "zoom": {
+      "scale-up-up": {
         "X": { "next": "scale-up-scale-up",
                "prev": "scale-down-scale-down" },
         "Y": { "next": "scale-up-scale-up",
                "prev": "scale-down-scale-down" }},
-        
-       // SCALE
-
-
+      "scale-down-up": {
+        "X": { "next": "scale-down-scale-up",
+               "prev": "scale-down-scale-up" },
+        "Y": { "next": "scale-down-scale-up",
+               "prev": "scale-down-scale-up" }},
       "glue": {
         "X": { "next": "glue-left-from-right",
                "prev": "glue-right-from-left" },
