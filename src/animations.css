@@ -155,13 +155,13 @@
 	from { transform: translateX(-100%); }
 }
 
-@-webkit-keyframes moveToRight { 
+@-webkit-keyframes moveToRight {
 	to { -webkit-transform: translateX(100%); }
 }
-@-moz-keyframes moveToRight { 
+@-moz-keyframes moveToRight {
 	to { -moz-transform: translateX(100%); }
 }
-@keyframes moveToRight { 
+@keyframes moveToRight {
 	to { transform: translateX(100%); }
 }
 
@@ -447,7 +447,6 @@
 }
 
 /* flip */
-
 .pt-page-flipOutRight {
 	-webkit-transform-origin: 50% 50%;
 	-webkit-animation: flipOutRight .5s both ease-in;
