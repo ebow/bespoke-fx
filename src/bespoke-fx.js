@@ -18,6 +18,7 @@
     var transition = options.transition ? options.transition : "move";
     var reverse = options.reverse ? options.reverse : false;
     
+    // Map effect name to transition animations
     var fx = {
       "move": {
         "X": { "next": "move-to-left-from-right",
@@ -123,9 +124,11 @@
         "X": { "next": "slide",
                "prev": "slide" },
         "Y": { "next": "slide",
-               "prev": "slide" }}
-      };
+               "prev": "slide" }
+      }
+    };
     
+    // Map transition animation names to in and out classnames
     var animations = {
       // Move
       "move-to-left-from-right": {
@@ -694,6 +697,9 @@
 		// animation end event name
 		var animEndEventName = animEndEventNames[ Modernizr.prefixed( 'animation' ) ];
     
+    /**
+     * HELPER METHODS FOR ADDING/REMOVING CLASSNAMES
+     */
     var addClassNames = function(element, classNames) {
       var names = classNames.split(" ");
       for(var i = 0; i < names.length; i++) {
@@ -708,11 +714,10 @@
       }
     };
     
-    var getAxisFromDirection = function(direction) {
-      return direction == 'vertical' ? "Y" : "X";
-    }
-    
-    var runTransition = function(outSlide, inSlide, directive) {
+    /**
+     * RUN TRANSITIONS ON SLIDES
+     */
+    var doTransition = function(outSlide, inSlide, directive) {
       var slide_transition_name = inSlide.getAttribute('data-bespoke-fx-transition');
       
       var axis = inSlide.getAttribute('data-bespoke-fx-direction') ?
@@ -740,12 +745,15 @@
       addClassNames(inSlide, inClass + " fx-transitioning-in");
     };
     
+    /**
+     * HANDLE DECK EVENTS
+     */
     deck.on('next', function(event) {
       if(event.index < deck.slides.length-1) {
         var outSlide = event.slide;
         var inSlide = deck.slides[event.index+1];
         
-        runTransition(outSlide, inSlide, 'next');
+        doTransition(outSlide, inSlide, 'next');
       }
     });
 
@@ -754,7 +762,7 @@
         var outSlide = event.slide;
         var inSlide = deck.slides[event.index-1];
         
-        runTransition(outSlide, inSlide, 'prev');
+        doTransition(outSlide, inSlide, 'prev');
       }
     });
   };
