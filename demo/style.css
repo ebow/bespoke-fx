@@ -1,67 +1,15 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700|Satisfy);
 
-*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 html, body {
   font-family: helvetica, arial, sans-serif;
   font-size: 16px;
   line-height: 28px;
-  height: 100%;
-  font-size: 100%;
-  padding: 0;
-  margin: 0;
 }
 
 body {
 	font-family: 'Lato', Calibri, Arial, sans-serif;
 	color: #fff;
 	background: #333;
-	overflow: hidden;
-}
-
-section {
-  display: none;
-}
-
-.bespoke-parent {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	-webkit-perspective: 1200px;
-	-moz-perspective: 1200px;
-	perspective: 1200px;
-  overflow: hidden;
-}
-
-.bespoke-slide {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	visibility: hidden;
-	overflow: hidden;
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	backface-visibility: hidden;
-	-webkit-transform: translate3d(0, 0, 0);
-	-moz-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-}
-
-section.bespoke-slide {
-  display: block;
-}
-
-.bespoke-inactive {
-  visibility: hidden;
-}
-
-.bespoke-active {
-  visibility: visible;
-  z-index: 1;
 }
 
 .bespoke-slide h1 {
@@ -99,8 +47,3 @@ section.bespoke-slide {
 .slide-4 { background: #fdc162; }
 .slide-5 { background: #fd6a62; }
 .slide-6 { background: #f68dbb; }
-
-.fx-transitioning-in,
-.fx-transitioning-out {
-  visibility: visible;
-}
