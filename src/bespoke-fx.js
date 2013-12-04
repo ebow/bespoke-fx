@@ -10,8 +10,8 @@
   bespoke.plugins.fx = function(deck, options) {
     var direction = options.direction ? options.direction : "horizontal";
     var axis = direction == 'vertical' ? "Y" : "X";
-    
     var transition = options.transition ? options.transition : "move";
+    
     var fx = {
       "move": {
         "X": { "next": "move-to-left-from-right",
@@ -697,7 +697,10 @@
     };
     
     var runTransition = function(outSlide, inSlide, directive) {
-      var transition_name = default_fx[directive]; // fx[transition][axis][directive];
+      var slide_transition_name = inSlide.getAttribute('data-bespoke-fx');
+      var slide_transition = slide_transition_name ? fx[slide_transition_name][axis] : default_fx;
+      var transition_name = slide_transition[directive];
+      
       var outClass = animations[transition_name].outClass;
       var inClass = animations[transition_name].inClass;
       
