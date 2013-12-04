@@ -707,7 +707,7 @@
       var slide_transition_name = inSlide.getAttribute('data-bespoke-fx-transition');
       var slide_transition = slide_transition_name ? fx[slide_transition_name][axis] : default_fx;
       
-      if(reverse) {
+      if(reverse || inSlide.getAttribute('data-bespoke-fx-reverse') === "true") {
         directive = directive === "next" ? "prev" : "next";
       }
       
