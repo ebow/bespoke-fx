@@ -697,7 +697,7 @@
     };
     
     var runTransition = function(outSlide, inSlide, directive) {
-      var slide_transition_name = inSlide.getAttribute('data-bespoke-fx');
+      var slide_transition_name = inSlide.getAttribute('data-bespoke-fx-transition');
       var slide_transition = slide_transition_name ? fx[slide_transition_name][axis] : default_fx;
       var transition_name = slide_transition[directive];
       
