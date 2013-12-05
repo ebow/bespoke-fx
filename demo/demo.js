@@ -1,7 +1,14 @@
 bespoke.horizontal.from('article', {
+  fx: true
+});
+
+/*
+// EXAMPLE WITH CUSTOM SETTINGS
+bespoke.horizontal.from('article', {
   fx: {
-    direction: "horizontal",
-    transition: "glue",
-    reverse: false
+    direction: "vertical",
+    transition: "cube",
+    reverse: true
   }
 });
+*/
