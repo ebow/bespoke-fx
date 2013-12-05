@@ -41,9 +41,44 @@ body {
 	color: rgba(0,0,0,0.1);
 }
 
-.slide-1 { background: #0ac2d2; }
-.slide-2 { background: #7bb7fa; }
-.slide-3 { background: #60d7a9; }
-.slide-4 { background: #fdc162; }
-.slide-5 { background: #fd6a62; }
-.slide-6 { background: #f68dbb; }
+.bespoke-slide h2 {
+	position: absolute;
+	font-weight: 300;
+	font-size: 1.4em;
+	line-height: 1;
+	letter-spacing: 6px;
+	margin: 0;
+	top: 58%;
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	word-spacing: -0.3em;
+}
+
+.bespoke-slide pre {
+  position: absolute;
+  margin: auto;
+  top: 65%;
+  left: 0;
+  right: 0;
+  width: 540px;
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 0.8em;
+  line-height: 1em;
+  color: rgba(255,255,255,0.7);
+  overflow: hidden;
+}
+
+.bespoke-slide pre strong {
+  color: white;
+}
+
+.bespoke-slide:nth-child(6n+1) { background: #0ac2d2; }
+.bespoke-slide:nth-child(6n+2) { background: #7bb7fa; }
+.bespoke-slide:nth-child(6n+3) { background: #60d7a9; }
+.bespoke-slide:nth-child(6n+4) { background: #fdc162; }
+.bespoke-slide:nth-child(6n+5) { background: #fd6a62; }
+.bespoke-slide:nth-child(6n+6) { background: #f68dbb; }
+.bespoke-slide:last-child { background: #333; }
