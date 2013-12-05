@@ -4,7 +4,7 @@ bespoke.horizontal.from('article', {
 
 /*
 // EXAMPLE WITH CUSTOM SETTINGS
-bespoke.horizontal.from('article', {
+bespoke.vertical.from('article', {
   fx: {
     direction: "vertical",
     transition: "cube",

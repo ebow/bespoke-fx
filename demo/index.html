@@ -8,16 +8,18 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
-    <article class="pt-perspective">
-      <section class="slide-1"><h1><span>bespoke-fx</span>Slide <strong>1</strong></h1></section>
-      <section class="slide-2">
+    <article>
+      <section><h1><span>bespoke-fx</span>Slide <strong>1</strong></h1></section>
+      
+      <section>
         <h1><span>bespoke-fx</span>Slide <strong>2</strong></h1>
         <h2>Use defaults</h2>
         <pre>bespoke.horizontal.from('article', {
   <strong>fx: true</strong>
 });</pre>
       </section>
-      <section class="slide-3">
+      
+      <section>
         <h1><span>bespoke-fx</span>Slide <strong>3</strong></h1>
         <h2>Custom global options</h2>
         <pre>bespoke.horizontal.from('article', {
@@ -28,127 +30,152 @@
     }</strong>
 });</pre>
       </section>
-      <section class="slide-4">
+      
+      <section>
         <h1><span>bespoke-fx</span>Slide <strong>4</strong></h1>
         <h2>Set per slide options</h2>
         <pre>&lt;section&gt;Slide 4&lt;/section&gt;</pre>
       </section>
-      <section class="slide-5" data-bespoke-fx-direction="vertical">
+      
+      <section data-bespoke-fx-direction="vertical">
         <h1><span>bespoke-fx</span>Slide <strong>5</strong></h1>
         <h2>Direction: horizontal or vertical</h2>
         <pre>&lt;section <strong>data-bespoke-fx-direction="vertical"</strong>&gt;Slide 5&lt;/section&gt;</pre>
       </section>
-      <section class="slide-6" data-bespoke-fx-reverse="true">
+      
+      <section data-bespoke-fx-reverse="true">
         <h1><span>bespoke-fx</span>Slide <strong>6</strong></h1>
         <h2>Run transition in reverse</h2>
         <pre>&lt;section <strong>data-bespoke-fx-reverse="true"</strong>&gt;Slide 6&lt;/section&gt;</pre>
       </section>
-      <section class="slide-7" data-bespoke-fx-transition="move">
+      
+      <section data-bespoke-fx-transition="move">
         <h1><span>bespoke-fx</span>Slide <strong>7</strong></h1>
         <h2>Different transitions: move [default]</h2>
         <pre>&lt;section <strong>data-bespoke-fx-transition="move"</strong>&gt;Slide 7&lt;/section&gt;</pre>
       </section>
-      <section class="slide-8" data-bespoke-fx-transition="move-fade">
+      
+      <section data-bespoke-fx-transition="move-fade">
         <h1><span>bespoke-fx</span>Slide <strong>8</strong></h1>
         <h2>Different transitions: move-fade</h2>
         <pre>&lt;section <strong>data-bespoke-fx-transition="move-fade"</strong>&gt;Slide 8&lt;/section&gt;</pre>
       </section>
-      <section class="slide-9" data-bespoke-fx-transition="move-both-fade">
+      
+      <section data-bespoke-fx-transition="move-both-fade">
         <h1><span>bespoke-fx</span>Slide <strong>9</strong></h1>
         <h2>Different transitions: move-both-fade</h2>
         <pre>&lt;section <strong>data-bespoke-fx-transition="move-both-fade"</strong>&gt;Slide 9&lt;/section&gt;</pre>
       </section>
-      <section class="slide-10" data-bespoke-fx-transition="move-different-easing">
+      
+      <section data-bespoke-fx-transition="move-different-easing">
         <h1><span>bespoke-fx</span>Slide <strong>10</strong></h1>
         <h2>Different transitions: move-different-easing</h2>
         <pre>&lt;section <strong>data-bespoke-fx-transition="move-different-easing"</strong>&gt;Slide 10&lt;/section&gt;</pre>
       </section>
-      <section class="slide-11" data-bespoke-fx-transition="scale-down-out-move-in">
+      
+      <section data-bespoke-fx-transition="scale-down-out-move-in">
         <h1><span>bespoke-fx</span>Slide <strong>11</strong></h1>
         <h2>Different transitions: scale-down-out-move-in</h2>
         <pre>&lt;section <strong>data-bespoke-fx-transition="scale-down-out-move-in"</strong>&gt;Slide 11&lt;/section&gt;</pre>
       </section>
-      <section class="slide-12" data-bespoke-fx-transition="move-out-scale-up">
+      
+      <section data-bespoke-fx-transition="move-out-scale-up">
         <h1><span>bespoke-fx</span>Slide <strong>12</strong></h1>
         <h2>Different transitions: move-out-scale-up</h2>
         <pre>&lt;section <strong>data-bespoke-fx-transition="move-out-scale-up"</strong>&gt;Slide 12&lt;/section&gt;</pre>
       </section>
-      <section class="slide-13" data-bespoke-fx-transition="scale-up-up">
+      
+      <section data-bespoke-fx-transition="scale-up-up">
         <h1><span>bespoke-fx</span>Slide <strong>13</strong></h1>
         <h2>Different transitions: scale-up-up</h2>
         <pre>&lt;section <strong>data-bespoke-fx-transition="scale-up-up"</strong>&gt;Slide 13&lt;/section&gt;</pre>
       </section>
-      <section class="slide-14" data-bespoke-fx-transition="scale-down-up">
+      
+      <section data-bespoke-fx-transition="scale-down-up">
         <h1><span>bespoke-fx</span>Slide <strong>14</strong></h1>
         <h2>Different transitions: scale-down-up</h2>
         <pre>&lt;section <strong>data-bespoke-fx-transition="scale-down-up"</strong>&gt;Slide 14&lt;/section&gt;</pre>
       </section>
-      <section class="slide-15" data-bespoke-fx-transition="glue">
+      
+      <section data-bespoke-fx-transition="glue">
         <h1><span>bespoke-fx</span>Slide <strong>15</strong></h1>
         <h2>Different transitions: glue</h2>
         <pre>&lt;section <strong>data-bespoke-fx-transition="glue"</strong>&gt;Slide 15&lt;/section&gt;</pre>
       </section>
-      <section class="slide-16" data-bespoke-fx-transition="flip">
+      
+      <section data-bespoke-fx-transition="flip">
         <h1><span>bespoke-fx</span>Slide <strong>16</strong></h1>
         <h2>Different transitions: flip</h2>
         <pre>&lt;section <strong>data-bespoke-fx-transition="flip"</strong>&gt;Slide 16&lt;/section&gt;</pre>
       </section>
-      <section class="slide-17" data-bespoke-fx-transition="fall">
+      
+      <section data-bespoke-fx-transition="fall">
         <h1><span>bespoke-fx</span>Slide <strong>17</strong></h1>
         <h2>Different transitions: fall</h2>
         <pre>&lt;section <strong>data-bespoke-fx-transition="fall"</strong>&gt;Slide 17&lt;/section&gt;</pre>
       </section>
-      <section class="slide-18" data-bespoke-fx-transition="newspaper">
+      
+      <section data-bespoke-fx-transition="newspaper">
         <h1><span>bespoke-fx</span>Slide <strong>18</strong></h1>
         <h2>Different transitions: newspaper</h2>
         <pre>&lt;section <strong>data-bespoke-fx-transition="newspaper"</strong>&gt;Slide 18&lt;/section&gt;</pre>
       </section>
-      <section class="slide-19" data-bespoke-fx-transition="push">
+      
+      <section data-bespoke-fx-transition="push">
         <h1><span>bespoke-fx</span>Slide <strong>19</strong></h1>
         <h2>Different transitions: push</h2>
         <pre>&lt;section <strong>data-bespoke-fx-transition="push"</strong>&gt;Slide 19&lt;/section&gt;</pre>
       </section>
-      <section class="slide-20" data-bespoke-fx-transition="pull">
+      
+      <section data-bespoke-fx-transition="pull">
         <h1><span>bespoke-fx</span>Slide <strong>20</strong></h1>
         <h2>Different transitions: pull</h2>
         <pre>&lt;section <strong>data-bespoke-fx-transition="pull"</strong>&gt;Slide 20&lt;/section&gt;</pre>
       </section>
-      <section class="slide-21" data-bespoke-fx-transition="fold">
+      
+      <section data-bespoke-fx-transition="fold">
         <h1><span>bespoke-fx</span>Slide <strong>21</strong></h1>
         <h2>Different transitions: fold</h2>
         <pre>&lt;section <strong>data-bespoke-fx-transition="fold"</strong>&gt;Slide 21&lt;/section&gt;</pre>
       </section>
-      <section class="slide-22" data-bespoke-fx-transition="unfold">
+      
+      <section data-bespoke-fx-transition="unfold">
         <h1><span>bespoke-fx</span>Slide <strong>22</strong></h1>
         <h2>Different transitions: unfold</h2>
         <pre>&lt;section <strong>data-bespoke-fx-transition="unfold"</strong>&gt;Slide 22&lt;/section&gt;</pre>
       </section>
-      <section class="slide-23" data-bespoke-fx-transition="room">
+      
+      <section data-bespoke-fx-transition="room">
         <h1><span>bespoke-fx</span>Slide <strong>23</strong></h1>
         <h2>Different transitions: room</h2>
         <pre>&lt;section <strong>data-bespoke-fx-transition="room"</strong>&gt;Slide 23&lt;/section&gt;</pre>
       </section>
-      <section class="slide-24" data-bespoke-fx-transition="cube">
+      
+      <section data-bespoke-fx-transition="cube">
         <h1><span>bespoke-fx</span>Slide <strong>24</strong></h1>
         <h2>Different transitions: cube</h2>
         <pre>&lt;section <strong>data-bespoke-fx-transition="cube"</strong>&gt;Slide 24&lt;/section&gt;</pre>
       </section>
-      <section class="slide-25" data-bespoke-fx-transition="carousel">
+      
+      <section data-bespoke-fx-transition="carousel">
         <h1><span>bespoke-fx</span>Slide <strong>25</strong></h1>
         <h2>Different transitions: carousel</h2>
         <pre>&lt;section <strong>data-bespoke-fx-transition="carousel"</strong>&gt;Slide 25&lt;/section&gt;</pre>
       </section>
-      <section class="slide-26" data-bespoke-fx-transition="sides">
+      
+      <section data-bespoke-fx-transition="sides">
         <h1><span>bespoke-fx</span>Slide <strong>26</strong></h1>
         <h2>Different transitions: sides</h2>
         <pre>&lt;section <strong>data-bespoke-fx-transition="sides"</strong>&gt;Slide 26&lt;/section&gt;</pre>
       </section>
-      <section class="slide-27" data-bespoke-fx-transition="slide">
+      
+      <section data-bespoke-fx-transition="slide">
         <h1><span>bespoke-fx</span>Slide <strong>27</strong></h1>
         <h2>Different transitions: slide</h2>
         <pre>&lt;section <strong>data-bespoke-fx-transition="slide"</strong>&gt;Slide 27&lt;/section&gt;</pre>
       </section>
-      <section class="slide-28" data-bespoke-fx-transition="cube" data-bespoke-fx-direction="vertical">
+      
+      <section data-bespoke-fx-transition="cube" data-bespoke-fx-direction="vertical">
         <h1><span>bespoke-fx</span>Slide <strong>28</strong></h1>
         <h2>Credits</h2>
         <pre>Original concept &amp; code from <a href="http://tympanus.net/codrops/2013/05/07/a-collection-of-page-transitions/">Codrops CSS Page Transitions article</a>
