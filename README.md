@@ -11,6 +11,10 @@ Download the [production version][min] or the [development version][max], or use
 [min]: https://raw.github.com/ebow/bespoke-fx/master/dist/bespoke-fx.min.js
 [max]: https://raw.github.com/ebow/bespoke-fx/master/dist/bespoke-fx.js
 
+## Demo
+
+[View the demo](http://ebow.github.io/bespoke-fx/) at the official [Bespoke-fx project page](http://ebow.github.io/bespoke-fx/).
+
 ## Usage
 
 First, include both `bespoke.js` and `bespoke-fx.js` in your page.
