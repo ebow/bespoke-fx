@@ -11,7 +11,7 @@
     
     var getAxisFromDirection = function(direction) {
       return direction == 'vertical' ? "Y" : "X";
-    }
+    };
     
     var direction = options.direction ? options.direction : "horizontal";
     var default_axis = getAxisFromDirection(direction);
@@ -718,8 +718,6 @@
      * RUN TRANSITIONS ON SLIDES
      */
     var doTransition = function(outSlide, inSlide, directive) {
-      var slide_transition_name = inSlide.getAttribute('data-bespoke-fx-transition');
-      
       var axis = inSlide.getAttribute('data-bespoke-fx-direction') ?
         getAxisFromDirection(inSlide.getAttribute('data-bespoke-fx-direction')) : default_axis;
       
@@ -727,6 +725,7 @@
         directive = directive === "next" ? "prev" : "next";
       }
       
+      var slide_transition_name = inSlide.getAttribute('data-bespoke-fx-transition');
       var slide_transition = slide_transition_name ? fx[slide_transition_name][axis] : fx[transition][axis];
       var transition_name = slide_transition[directive];
       
