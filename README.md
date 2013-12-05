@@ -19,18 +19,18 @@ Second, include the styles `main.css` and `animations.css`.
 
 For example
 ```html
-&lt;link rel="stylesheet" href="path/to/main.css"&gt;
-&lt;link rel="stylesheet" href="path/to/animations.css"&gt;
+<link rel="stylesheet" href="path/to/main.css">
+<link rel="stylesheet" href="path/to/animations.css">
 
-&lt;article&gt;
-  &lt;section&gt;Slide 1&lt;/section&gt;
-  &lt;section&gt;Slide 2&lt;/section&gt;
-  &lt;section&gt;Slide 3&lt;/section&gt;
-&lt;/article&gt;
+<article>
+  <section>Slide 1</section>
+  <section>Slide 2</section>
+  <section>Slide 3</section>
+</article>
 
-&lt;script src="bespoke.min.js"&gt;&lt;/script&gt;
-&lt;script src="bespoke-fx.min.js"&gt;&lt;/script&gt;
-&lt;script src="path/to/my/script.js"&gt;&lt;/script&gt;
+<script src="bespoke.min.js"></script>
+<script src="bespoke-fx.min.js"></script>
+<script src="path/to/my/script.js"></script>
 ```
 
 Then, simply include the plugin when instantiating your presentation.
@@ -100,7 +100,7 @@ This is useful when you want to transition a single slide in a different way to 
 eg.
 
 ```html
-&lt;section data-bespoke-fx-transition="cube" data-bespoke-fx-direction="vertical" data-bespoke-fx-reverse="true"&gt;Slide&lt;/section&gt;
+<section data-bespoke-fx-transition="cube" data-bespoke-fx-direction="vertical" data-bespoke-fx-reverse="true">Slide</section>
 ```
 
 ## Package managers
