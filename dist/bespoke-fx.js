@@ -1,15 +1,23 @@
+/*!
+ * bespoke-fx v0.0.0
+ * https://github.com/ebow/bespoke-fx
+ *
+ * Copyright 2013, Tim Churchward
+ * This content is released under the MIT license
+ */
+
 (function(bespoke) {
   bespoke.plugins.fx = function(deck, options) {
-    
+
     var getAxisFromDirection = function(direction) {
       return direction == 'vertical' ? "Y" : "X";
     };
-    
+
     var direction = options.direction ? options.direction : "horizontal";
     var default_axis = getAxisFromDirection(direction);
     var transition = options.transition ? options.transition : "move";
     var reverse = options.reverse ? options.reverse : false;
-    
+
     // Map effect name to transition animations
     var fx = {
       "move": {
@@ -119,7 +127,7 @@
                "prev": "slide" }
       }
     };
-    
+
     // Map transition animation names to in and out classnames
     var animations = {
       // Move
@@ -155,7 +163,7 @@
         inClass: 'fx-slide-moveFromTop',
         reverse: "move-to-top-from-bottom"
       },
-    
+
       // Fade
       "fade-from-right": {
         id: 5,
@@ -221,7 +229,7 @@
         inClass: 'fx-slide-moveFromTopFade',
         reverse: "fade-top-fade-bottom"
       },
-    
+
       // Different easing
       "different-easing-from-right": {
         id: 13,
@@ -255,7 +263,7 @@
         inClass: 'fx-slide-moveFromTop',
         reverse: "different-easing-from-bottom"
       },
-    
+
       // Scale
       "scale-down-from-right": {
         id: 17,
@@ -345,7 +353,7 @@
         inClass: 'fx-slide-scaleUpCenter fx-slide-delay400',
         reverse: "scale-down-scale-up"
       },
-    
+
       // Rotate: Glue
       "glue-left-from-right": {
         id: 28,
@@ -379,7 +387,7 @@
         inClass: 'fx-slide-moveFromBottom fx-slide-delay200 fx-slide-ontop',
         reverse: "glue-bottom-from-top"
       },
-    
+
       // Rotate: Flip
       "flip-right": {
         id: 32,
@@ -429,7 +437,7 @@
         inClass: 'fx-slide-rotateInNewspaper fx-slide-delay500',
         reverse: "newspaper"
       },
-    
+
       // Push / Pull
       "push-left-from-right": {
         id: 38,
@@ -495,7 +503,7 @@
         inClass: 'fx-slide-rotatePullTop fx-slide-delay180',
         reverse: "push-top-pull-bottom"
       },
-      
+
       // Fold / Unfold
       "fold-left-from-right": {
         id: 46,
@@ -561,7 +569,7 @@
         inClass: 'fx-slide-rotateUnfoldBottom',
         reverse: "fold-bottom-from-top"
       },
-      
+
       // Room
       "room-to-left": {
         id: 54,
@@ -595,7 +603,7 @@
         inClass: 'fx-slide-rotateRoomBottomIn',
         reverse: "room-to-top"
       },
-      
+
       // Cube
       "cube-to-left": {
         id: 58,
@@ -625,7 +633,7 @@
         inClass: 'fx-slide-rotateCubeBottomIn',
         reverse: "cube-to-top"
       },
-      
+
       // Carousel
       "carousel-to-left": {
         id: 62,
@@ -675,9 +683,9 @@
         reverse: "slide"
       }
     };
-    
+
     var default_fx = fx[transition][default_axis];
-    
+
     // Browser compatibility
 		var animEndEventNames = {
 			'WebkitAnimation' : 'webkitAnimationEnd',
@@ -685,10 +693,10 @@
 			'msAnimation' : 'MSAnimationEnd',
 			'animation' : 'animationend'
 		};
-    
+
 		// animation end event name
 		var animEndEventName = animEndEventNames[ Modernizr.prefixed( 'animation' ) ];
-    
+
     /**
      * HELPER METHODS FOR ADDING/REMOVING CLASSNAMES
      */
@@ -698,44 +706,44 @@
         element.classList.add(names[i]);
       }
     };
-    
+
     var removeClassNames = function(element, classNames) {
       var names = classNames.split(" ");
       for(var i = 0; i < names.length; i++) {
         element.classList.remove(names[i]);
       }
     };
-    
+
     /**
      * RUN TRANSITIONS ON SLIDES
      */
     var doTransition = function(outSlide, inSlide, directive) {
       var axis = inSlide.getAttribute('data-bespoke-fx-direction') ?
         getAxisFromDirection(inSlide.getAttribute('data-bespoke-fx-direction')) : default_axis;
-      
+
       if(reverse || inSlide.getAttribute('data-bespoke-fx-reverse') === "true") {
         directive = directive === "next" ? "prev" : "next";
       }
-      
+
       var slide_transition_name = inSlide.getAttribute('data-bespoke-fx-transition');
       var slide_transition = slide_transition_name ? fx[slide_transition_name][axis] : fx[transition][axis];
       var transition_name = slide_transition[directive];
-      
+
       var outClass = animations[transition_name].outClass;
       var inClass = animations[transition_name].inClass;
-      
+
       outSlide.addEventListener(animEndEventName, function(event) {
         removeClassNames(event.target, outClass + " fx-transitioning-out");
       });
-      
+
       inSlide.addEventListener(animEndEventName, function(event) {
         removeClassNames(event.target, inClass + " fx-transitioning-in");
       });
-      
+
       addClassNames(outSlide, outClass + " fx-transitioning-out");
       addClassNames(inSlide, inClass + " fx-transitioning-in");
     };
-    
+
     /**
      * HANDLE DECK EVENTS
      */
@@ -743,7 +751,7 @@
       if(event.index < deck.slides.length-1) {
         var outSlide = event.slide;
         var inSlide = deck.slides[event.index+1];
-        
+
         doTransition(outSlide, inSlide, 'next');
       }
     });
@@ -752,7 +760,7 @@
       if(event.index > 0 && !event.transition_complete) {
         var outSlide = event.slide;
         var inSlide = deck.slides[event.index-1];
-        
+
         doTransition(outSlide, inSlide, 'prev');
       }
     });
