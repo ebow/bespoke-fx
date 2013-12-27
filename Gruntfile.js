@@ -43,7 +43,10 @@ module.exports = function(grunt) {
     jasmine: {
       src: ['src/**/*.js'],
       options: {
-        vendor: ['node_modules/bespoke/dist/bespoke.js'],
+        vendor: [
+          'node_modules/bespoke/dist/bespoke.js',
+          'libs/modernizr/modernizr.custom.js'
+        ],
         specs: 'spec/*Spec.js',
         helpers: 'spec/*Helper.js'
       }
@@ -62,7 +65,7 @@ module.exports = function(grunt) {
     micro: {
       src: '<%= uglify.dist.dest %>',
       options: {
-        limit: 1024,
+        limit: 1024 * 3,
         gzip: true
       }
     },
