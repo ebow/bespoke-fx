@@ -55,6 +55,10 @@ body {
 	word-spacing: -0.3em;
 }
 
+.bespoke-slide a {
+	color: rgb(3, 179, 255);
+}
+
 .bespoke-slide pre {
   position: absolute;
   margin: auto;
