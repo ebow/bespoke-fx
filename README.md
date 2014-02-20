@@ -2,7 +2,7 @@
 
 # bespoke-fx
 
-CSS slide transitions for bespoke.js
+CSS slide transitions for [bespoke.js](https://github.com/markdalgleish/bespoke.js)
 
 ## Download
 
