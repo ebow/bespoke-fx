@@ -724,6 +724,18 @@ BespokeFx = {
     }
   },
 	
+	slide: function(event) {
+		if(event.slide) {
+			var outSlideIndex = this.deck.slide();
+			var outSlide = this.deck.slides[outSlideIndex];
+			var inSlideIndex = event.index;
+			var inSlide = event.slide;
+			var direction = (inSlideIndex > outSlideIndex) ? 'next' : 'prev';
+			
+			this.doTransition(outSlide, inSlide, direction);
+		}
+	},
+  
   doTransition: function(outSlide, inSlide, directive) { // RUN TRANSITIONS ON SLIDES
     var axis = inSlide.getAttribute('data-bespoke-fx-direction') ?
       this.getAxisFromDirection(inSlide.getAttribute('data-bespoke-fx-direction')) : this.default_axis;
@@ -758,6 +770,7 @@ BespokeFx = {
     BespokeFx.init(deck, options);
     deck.on('next', BespokeFx.next.bind(BespokeFx));
     deck.on('prev', BespokeFx.prev.bind(BespokeFx));
+		deck.on('slide', BespokeFx.slide.bind(BespokeFx));
   };
 
 }(bespoke, BespokeFx));
