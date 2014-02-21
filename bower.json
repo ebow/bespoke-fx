@@ -2,6 +2,6 @@
   "name": "bespoke-fx",
   "version": "0.0.0",
   "dependencies": {
-    "bespoke.js": ">=0.3.0"
+    "bespoke.js": ">=0.4.0"
   }
 }

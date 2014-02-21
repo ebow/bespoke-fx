@@ -1,5 +1,7 @@
-bespoke.horizontal.from('article', {
-  fx: true
+bespoke.from('article', {
+  keys: true,
+  fx: true,
+	loop: true
 });
 
 /*
