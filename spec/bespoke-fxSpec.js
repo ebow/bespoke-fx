@@ -17,6 +17,14 @@
       };
 
     beforeEach(createDeck);
+    
+    describe("transitioning to next slide", function() {
+      describe("when there is a next slide", function() {
+        it("should transition to the next slide", function() {
+          expect();
+        });
+      });
+    });
 
     describe("deck.slide", function() {
 
